@@ -1,3 +1,13 @@
+   {% extends "locations/base.html" %}
+
+
+   {% block header %} 
+        <script src="https://maps.googleapis.com/maps/api/js"></script>  
+   {% endblock %}
+
     {% block content %}
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <div id="map-canvas"></div>
+        <div id='legend'>
+            My first legend!
+        </div>
     {% endblock %}

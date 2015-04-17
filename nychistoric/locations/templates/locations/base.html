@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Historic NYC filmings</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script type="text/javascript" src="{%static "locations/d3.v3.min.js"%}"></script>
+        <script src="{%static "locations/base.js"%}"></script>
+        <link rel="stylesheet" href="{% static 'locations/base.css' %}">
+    </head>
+    <body>
+            <header>
+                {% block header %}                   
+                {% endblock %}
+                </nav>
+            </header>
+                {% block content %}
+                {% endblock %}
+            <footer>
+                {% block footer %}
+                {% endblock %}
+            </footer>
+        </div>
+    </body>
+</html>

@@ -2,26 +2,29 @@
 <html>
     <head>
         <title>Historic NYC filmings</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <script type="text/javascript" src="{%static "locations/d3.v3.min.js"%}"></script>
         <script src="{%static "locations/base.js"%}"></script>
-        <link rel="stylesheet" href="{% static 'locations/base.css' %}">
+        <link rel="stylesheet" href="{% static "locations/base.css" %}">
     </head>
     <body>
             <header>
-                {% block header %}                   
+                {% block header %}
                 {% endblock %}
-                </nav>
             </header>
-                {% block content %}
-                {% endblock %}
+                <div class = "content">
+                    {% block content %}
+                    {% endblock %}
+                </div>
             <footer>
                 {% block footer %}
                 {% endblock %}
             </footer>
-        </div>
     </body>
 </html>

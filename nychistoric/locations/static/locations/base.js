@@ -1,16 +1,19 @@
-$(document).ready(function(){
-        var mapCanvas = document.getElementById('map-canvas');
+$( document ).ready(function initialize() {
         var mapOptions = {
-            center: new google.maps.LatLng(40.722445296, -73.97865056),
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            zoom: 10,
+            center: new google.maps.LatLng(40.74727,-73.9800645)
         }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({
-        position: (myLatlng),
-        map: map,
-        title:"Hello World!"
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+        var image = "static/locations/video.png"
+        var filmLatLng = new google.maps.LatLng(40.7604000000000,-73.9758000000000);
+        var beachMarker = new google.maps.Marker({
+            position: filmLatLng,
+            map: map,
+            icon: image
         });
-        google.maps.event.addDomListener(window, 'load');
-        marker.setMap(map);
+    // };
 });
+
+google.maps.event.addDomListener(window, 'load', initialize);

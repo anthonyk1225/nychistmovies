@@ -20,8 +20,8 @@ with open('locations/Interactive_Map_Data.csv',errors='replace') as shit:
         )
         # set relationship (Coordinates and Locations)
         location.coordinate = [coordinate]
-        if Film.objects.filter(title=crap[0]):
-            continue
+        # if Film.objects.filter(title=crap[0]):
+        #     continue
         movie_link = Link.objects.create(link=crap[15])
         film, created = Film.objects.get_or_create(
             title=crap[0],

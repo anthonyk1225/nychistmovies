@@ -11,7 +11,7 @@ $( document ).ready(function() {
             for (i=0;i<data['coords'].length; i++){
                 var image = "/static/locations/video.png"
                 var filmLatLng = new google.maps.LatLng(data['coords'][i][0],data['coords'][i][1]);
-                var beachMarker = new google.maps.Marker({
+                var vidMarker = new google.maps.Marker({
                     position: filmLatLng,
                     map: map,
                     icon: image,

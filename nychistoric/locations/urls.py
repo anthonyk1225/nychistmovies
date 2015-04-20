@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'nychistoric.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', view.IndexView.as_view(),name='index'),
+    url(r'coords/$', view.CoordView.as_view(), name='coords'),
 )

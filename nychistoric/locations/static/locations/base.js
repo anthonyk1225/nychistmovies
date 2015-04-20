@@ -6,7 +6,7 @@ $( document ).ready(function initialize() {
         var map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
-        var image = "static/locations/video.png"
+        var image = "/static/locations/video.png"
         var filmLatLng = new google.maps.LatLng(40.7604000000000,-73.9758000000000);
         var beachMarker = new google.maps.Marker({
             position: filmLatLng,
@@ -15,5 +15,4 @@ $( document ).ready(function initialize() {
         });
     // };
 });
-
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);

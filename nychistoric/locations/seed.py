@@ -19,7 +19,7 @@ with open('locations/Interactive_Map_Data.csv',errors='replace') as shit:
             description=crap[8],
         )
         # set relationship (Coordinates and Locations)
-        location.coordinate = [coordinate]
+        location.coordinate.add(coordinate)
         # if Film.objects.filter(title=crap[0]):
         #     continue
         movie_link = Link.objects.create(link=crap[15])
@@ -28,7 +28,7 @@ with open('locations/Interactive_Map_Data.csv',errors='replace') as shit:
             link=movie_link,
             year=crap[1]
         )
-        film.location = [location]
+        film.location.add(location)
         # get or create director url
         links = crap[7].split(',')
         # Fuck movies have multiple directors
